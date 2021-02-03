@@ -9,6 +9,10 @@ Open WebRTC Toolkit JavaScript SDK builds on top of the W3C standard WebRTC APIs
 4. Run `grunt`.
 5. Get release package in "dist" folder.
 
+## Run local website to connect to p2p server https://github.com/jojo13572001/owt-server-p2p/tree/v5.0-rc.1
+After finish building release package and run owt-server-p2p,
+run.bat
+
 ## How to build uncompressed SDK
 Run `grunt debug` in "scripts" folder and get files in "dist/sdk-debug".
 
