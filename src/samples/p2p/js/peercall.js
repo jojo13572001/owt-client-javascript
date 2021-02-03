@@ -5,19 +5,19 @@
 'use strict';
 
 // Please change example.com to signaling server's address.
-const serverAddress = 'https://example.com:8096';
+const serverAddress = 'https://localhost:8096';
 
 // Please change this STUN and TURN server information.
 const rtcConfiguration = {
   iceServers: [{
-    urls: 'stun:example.com:3478',
+    urls: 'stun:stun4.l.google.com:19302',
   }, {
     urls: [
-      'turn:example.com:3478?transport=udp',
-      'turn:example.com:3478?transport=tcp',
+      'turn:18.138.196.140:3478?transport=udp',
+      'turn:18.138.196.140:3478?transport=tcp',
     ],
-    credential: 'password',
-    username: 'username',
+    credential: 'Y2Ytb3BlbnZpZHUtYmxh',
+    username: 'turn_user',
   }],
 };
 
