@@ -109,7 +109,7 @@
   <script type="text/javascript">
     'use strict';
     var isVideo = 1;
-    var serverAddress = 'http://example.com'; // Please change example.com to signaling server's address.
+    var serverAddress = 'https://localhost:8096'; // Please change example.com to signaling server's address.
     const signaling = new SignalingChannel();
     let publicationForCamera;
     let publicationForScreen;
@@ -118,13 +118,13 @@
       videoEncodings: [{codec:{name: 'h264'}}, {codec: {name: 'vp9'}}, {codec: {name: 'vp8'}}],
       rtcConfiguration:{
         iceServers: [{
-          urls: "stun:example.com:3478"
+          urls: "stun:stun4.l.google.com:19302"
         }, {
-          urls: ["turn:example.com:3478?transport=udp",
-            "turn:example.com:3478?transport=tcp"
+          urls: ["turn:18.138.196.140:3478?transport=udp",
+            "turn:18.138.196.140:3478?transport=tcp"
           ],
-          credential: "password",
-          username: "username"
+          credential: "Y2Ytb3BlbnZpZHUtYmxh",
+          username: "turn_user"
         }]
       },
     }, signaling);
