@@ -115,13 +115,14 @@
     let publicationForScreen;
     var p2p = new Owt.P2P.P2PClient({
       audioEncodings: true,
-      videoEncodings: [{codec:{name: 'h264'}}, {codec: {name: 'vp9'}}, {codec: {name: 'vp8'}}],
+      videoEncodings: [{codec:{name: 'h264'}}, {codec: {name: 'vp8'}}, {codec: {name: 'vp9'}}],
       rtcConfiguration:{
         iceServers: [{
-          urls: "stun:stun4.l.google.com:19302"
+          urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302","stun:stun2.l.google.com:19302","stun:stun3.l.google.com:19302","stun:stun4.l.google.com:19302"]
         }, {
-          urls: ["turn:18.138.196.140:3478?transport=udp",
-            "turn:18.138.196.140:3478?transport=tcp"
+          urls: ["turn:18.138.196.140:3478", "stun:3.8.171.200:3478", "stun:18.138.196.140:3478", "stun:3.84.195.253:3478", 
+                 "turn:3.91.80.102:3478", "turn:3.84.195.253:3478", "stun:3.91.80.102:3478", "stun:13.251.124.178:3478", 
+                 "turn:3.8.171.200:3478", "turn:13.251.124.178:3478"
           ],
           credential: "Y2Ytb3BlbnZpZHUtYmxh",
           username: "turn_user"
@@ -148,8 +149,8 @@
             },
             video:{
               resolution:{
-                "width": 640,
-                "height":480
+                "width": 1920,
+                "height":1080
               },
               frameRate:20,
               source:'screen-cast'
